@@ -1,0 +1,112 @@
+@charset "UFT-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: url(../imagens/fundo_edificio-2560x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    min-height: 500px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;    
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #0E4a9e;
+    /*color: #f07d00;*/
+    text-align: right;
+    
+    border: 1px dashed blue;
+
+    flex: 0 0 auto;
+  }
+
+  .material-symbols-outlined:active {
+    background-color: #00997B;
+    color: white;
+    font-size: 2em;
+  }
+
+header img#logo_header {
+    max-width: 200px;
+    border: 1px dashed blue;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    flex: 0 0 auto;
+}
+
+header nav {
+    display: none;
+    border: 1px dashed blue;
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 3px 10px;
+}
+
+header a:hover {
+    border-bottom: 5px solid #f07d00;
+
+}
+
+main {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.842);
+    max-width: 800px;
+    padding: 10px;
+    margin: auto;
+
+    border: 1px dashed red;
+
+    flex: 0 0 auto;
+}
+
+footer {
+    display: none;
+    background-color: white;
+
+    border: 1px dashed green;
+
+    flex: auto;
+}
