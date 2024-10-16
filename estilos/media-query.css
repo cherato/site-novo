@@ -1,12 +1,17 @@
 @charset "UTF-8";
 
+/* Exibir o menu normalmente em telas maiores */
+@media (min-width: 421px) {
+    #header_menu {
+        display: block; /* Exibir o menu automaticamente em telas maiores */
+    }
+}
 a {
     text-decoration: none;
     font-weight: bold;
     color: black;
     padding: 3px 10px;
 }
-
 header a:hover {
     border-bottom: 5px solid #f07d00;
 

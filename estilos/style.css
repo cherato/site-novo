@@ -79,7 +79,7 @@ main {
 }
 
 main > nav.menu {
-    display: flex;
+    display: none;
     flex-flow: column nowrap;
     align-items: flex-end;
 }
@@ -112,11 +112,23 @@ main i.material-symbols-outlined {
     border:1px solid #00997B25;
   }
 
-footer {
-    display: none;
-    background-color: white;
-
-    border: 1px dashed green;
-
-    flex: auto;
+body div#rodape {
+    flex-flow: 0 0 auto;
+}
+footer nav {
+  text-align: right;
+  background-color: #ffffffc5;
+  padding: 5px;
+}
+footer nav a img {
+  width: 26px;
+  margin: 0px 10px;
+}
+footer > h2 {
+  background-color: #f07c00;
+  color: black;
+  font-size: .6em;
+  font-weight: 200;
+  text-align: center;
+  padding: 5px 10px;
 }
