@@ -1,21 +1,56 @@
 @charset "UFT-8";
 
+
+/* ---- criando familias de fontes ---*/
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+
+.charm-regular {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ---- reset de configuraões ---*/
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+/* ---- criando variaveis ---*/
+:root {
+  --cor1: #f07d00;
+  --cor1c: #ffa646;
+  --cor1e: #a45500;
+  --cor2: #00997b;
+  --cor2c: #31b299;
+  --cor2e: #006954;
+  --cor3: #0e4a9e;
+  --cor3c: #3d70b6;
+  --cor3e: #08326c;
+
+  --padrao: arial, helvetica, sans-serif;
+  --destaque: 'charm', cursive;
+}
+
+
+/* ---- Configurações gerais do corpo ---*/
 body {
     background-color: black;
-    background-image: url(../imagens/fundo_edificio-2560x1080.jpg);
+    background-image: url(../imagens/fundo_edificio2-2560x1080.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: top center;
+    background-position: top right;
     height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--padrao);
     font-size: 1em;
     line-height: 1.2em;
 
@@ -24,8 +59,9 @@ body {
     justify-content: space-between;    
 }
 
+/* ---- Configurações gerais do cabeçalho ---*/
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffff;
     padding: 10px;
 
     display: flex;
@@ -47,8 +83,8 @@ header i.material-symbols-outlined {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    border:1px solid #00997B25;
-    color: #00997B;
+    border:1px solid var(--cor1);
+    color: var(--cor1);
     text-align: right;
     padding: 10px;
     border-radius: 25px;
@@ -56,10 +92,11 @@ header i.material-symbols-outlined {
     
     flex: 0 0 auto;
   }
+
   header i.material-symbols-outlined:active {
-    background-color: #00997B;
-    color: white;
-  }
+  background-color: var(--cor1);
+  color: white;
+}
 
 header img#logo_header {
     max-width: 240px;
@@ -69,19 +106,44 @@ header img#logo_header {
     flex: 0 0 auto;
 }
 
+/* ---- Configurações gerais do principal ---*/
 main {
     width: 100%;
     height: 100%;
     padding: 10px;
     margin: auto;
 
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
 }
 
 main > nav.menu {
     display: none;
     flex-flow: column nowrap;
-    align-items: flex-end;
+    align-items: center;
+}
+
+main > section.home {
+  font-family: var(--destaque);
+  font-size: 3em;
+  font-weight: 200;
+  /*background-color: #006954;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);*/
+  padding: 10px;
+  line-height: 1.6em;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #0b3d82;
+  border-radius: 20px;
+  
+  flex: 0 1 300px;
+}
+
+main  p#parag_home {
+  text-align: center;
 }
 
 main i.material-symbols-outlined {
@@ -96,8 +158,8 @@ main i.material-symbols-outlined {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    background-color: #ffffff94;
-    color: #006954;
+    background-color: #ffffff;
+    color: var(--cor1);
     text-align: right;
     padding: 10px;
     margin-bottom: 10px;
@@ -107,25 +169,59 @@ main i.material-symbols-outlined {
   }
 
   main i.material-symbols-outlined:active {
-    background-color: #ffffff9d;
-    color: #00997B;
-    border:1px solid #00997B25;
+    background-color: #ffffff;
+    color: var(--cor1c);
+    border:1px solid var(--cor1e);
   }
 
+/* ---- Configurações gerais do rodape ---*/
+
 body div#rodape {
-    flex-flow: 0 0 auto;
+    flex: 0 0 auto;
 }
+
+footer div#footer_topo {
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+footer a.fone {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--cor3e);
+
+  flex: 0 0 auto;
+  align-content: center;
+}
+
 footer nav {
   text-align: right;
-  background-color: #ffffffc5;
-  padding: 5px;
+
+
+  flex: 0 0 auto;
+  align-content: center;
 }
-footer nav a img {
+
+
+footer img.icon1 {
+  width: 30px;
+  margin: 0px 10px;
+  vertical-align: middle;
+}
+
+footer img.icon2 {
   width: 26px;
   margin: 0px 10px;
+  vertical-align: middle;
 }
+
 footer > h2 {
-  background-color: #f07c00;
+  background-color: var(--cor1);
   color: black;
   font-size: .6em;
   font-weight: 200;

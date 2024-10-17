@@ -2,17 +2,86 @@
 
 /* Exibir o menu normalmente em telas maiores */
 @media (min-width: 421px) {
-    #header_menu {
-        display: block; /* Exibir o menu automaticamente em telas maiores */
-    }
-}
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-    padding: 3px 10px;
-}
-header a:hover {
-    border-bottom: 5px solid #f07d00;
 
+    /* ---- Configurações gerais do cabeçalho ---*/
+
+    header {
+        background-color: #ffffff54;
+    }
+
+    header i.material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        border:1px solid var(--cor1);
+        background-color: #ffffff90;
+        color: var(--cor1);
+        text-align: right;
+        padding: 10px;
+        border-radius: 25px;
+        vertical-align: middle;
+        
+        flex: 0 0 auto;
+    }
+    
+    /* ---- Configurações gerais do principal ---*/
+    main {
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+    main > section.home {
+        font-size: 5em;
+        flex: 0 0 800px;
+    }
+    main  p#parag_home {
+        text-align: left;
+    }
+    main i.material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        background-color: #ffffffb7;
+        color: var(--cor1);
+        text-align: right;
+        padding: 10px 50px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        
+        flex: 0 0 auto;
+    }
+
+    /* ---- Configurações gerais do rodape ---*/
+    footer div#footer_topo {
+        background-color: #ffffff54;
+        padding: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+      
+      footer a.fone {
+        font-size: 1.6em;
+
+      }
+      
+      footer nav a img {
+        width: 32px;
+      }
 }
